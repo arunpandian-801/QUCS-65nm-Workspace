@@ -1,0 +1,14 @@
+# Ignore All Subdirectories
+*/
+
+# But include these Project Subdirectories
+!Amplifiers_21_prj
+!AnalogBlks65_prj
+!NormanBalabanian_CH_02_prj
+
+# Ignore Display Windows, Simulation datasets
+*.dpl
+*.dat.ngspice
+
+# Ignore the Model File too - Cause of NDA
+LL65.inc
