@@ -2,9 +2,10 @@
 */
 
 # But include these Project Subdirectories
-!Amplifiers_21_prj
-!AnalogBlks65_prj
-!NormanBalabanian_CH_02_prj
+!Amplifiers_21_prj/
+!AnalogBlks65_prj/
+!NormanBalabanian_CH_02_prj/
+!CH_20_CurrentMirrors_prj/
 
 # Ignore Display Windows, Simulation datasets
 *.dpl
