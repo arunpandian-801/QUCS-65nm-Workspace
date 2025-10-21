@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="/home/anbu/QucsWorkspace/CH_24_OpAmpsI_prj/Docs/Figure_24_31/ASSETS/2_OpampSwin" width="100%" height="100%"  viewBox="-6 -6 1017 684">
+<desc>
+XCircuit Version 3.9
+File "/home/anbu/QucsWorkspace/CH_24_OpAmpsI_prj/Docs/Figure_24_31/ASSETS/2_OpampSwingLimit.ps" Page 1
+</desc>
+<g stroke="black">
+<path d="M560,522 L560,362 720,442 z" fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 579 400)" fill="#000000" >
+<text stroke="none" font-family="Times" font-size="40" ><tspan x="-12" y="6">&#8722;</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 579 492)" fill="#000000" >
+<text stroke="none" font-family="Times" font-size="40" ><tspan x="-11" y="10">+</tspan>
+</text></g>
+<path d="M368,394 L340,394 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M240,394 L268,394 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M268,394 L274,408 286,380 298,408 310,380 322,408 334,380 340,394 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<ellipse cx="296" cy="231" rx="0" ry="0" fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M368,394 L512,394 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M688,218 L660,218 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M560,218 L588,218 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M588,218 L594,232 606,204 618,232 630,204 642,232 654,204 660,218 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M496,218 L416,218 416,394 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<ellipse cx="416" cy="394" rx="6" ry="6" fill="#000000" stroke="none" />
+<ellipse cx="480" cy="554" rx="32" ry="32" fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M480,522 L480,490 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M480,586 L480,618 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 480 540)" fill="#000000" >
+<text stroke="none" font-family="Times" font-size="40" ><tspan x="-11" y="10">+</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 480 576)" fill="#000000" >
+<text stroke="none" font-family="Times" font-size="40" ><tspan x="-12" y="6">&#8722;</tspan>
+</text></g>
+<path d="M480,618 L480,650 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M448,650 L512,650 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M462,664 L498,664 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M476,678 L484,678 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M480,490 L560,490 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M688,218 L832,218 832,442 720,442 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M240,394 L144,394 144,490 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<ellipse cx="144" cy="554" rx="35" ry="35" fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M128,570 L144,570 144,538 160,538 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M144,618 L144,650 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M112,650 L176,650 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M126,664 L162,664 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M140,678 L148,678 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M144,522 L144,490 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M144,618 L144,586 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M496,218 L560,218 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M512,394 L560,394 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 528 570)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">0.8 V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1   0 570)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">0.1 V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 432 442)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">0.8 V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 256 330)" fill="#0000ff" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">0.7 V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 592 170)" fill="#0000ff" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">0.7 V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 736 170)" fill="#0000ff" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">+</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 512 170)" fill="#0000ff" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">-</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 384 330)" fill="#0000ff" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">+</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 192 330)" fill="#0000ff" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">-</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 592 282)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">10 k</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 272 458)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">10 k</tspan>
+</text></g>
+<path d="M832,74 L304,74 304,250 144,250 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#ff0000" />
+<path d="M828,66 C818,71 815,71 800,74 C815,77 818,77 828,82 C826,76 826,72 828,66 " fill="#ff0000" stroke="none" />
+<path d="M524,66 C514,71 511,71 496,74 C511,77 514,77 524,82 C522,76 522,72 524,66 " fill="#ff0000" stroke="none" />
+<path d="M332,66 C322,71 319,71 304,74 C319,77 322,77 332,82 C330,76 330,72 332,66 " fill="#ff0000" stroke="none" />
+<path d="M300,242 C290,247 287,247 272,250 C287,253 290,253 300,258 C298,252 298,248 300,242 " fill="#ff0000" stroke="none" />
+<path d="M172,242 C162,247 159,247 144,250 C159,253 162,253 172,258 C170,252 170,248 172,242 " fill="#ff0000" stroke="none" />
+<g transform="matrix(   1    0   -0    1 528  26)" fill="#ff0000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">70 uA</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 848 458)" fill="#0000ff" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">V<tspan dy="9" font-size="26.8">out</tspan><tspan y="0"> = ??</tspan></tspan>
+</text></g>
+</g>
+</svg>

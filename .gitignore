@@ -9,6 +9,10 @@
 !CH_22_DifferentialAmplifiers_prj/
 !CH_24_OpAmpsI_prj/
 
+# I can't figure out how to add Docs/ subdirectory in all the project directories.
+# So, it is forcefully added for now.
+# !**/Docs/
+
 # Ignore Display Windows, Simulation datasets
 *.dpl
 *.dat.ngspice
