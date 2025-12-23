@@ -1,11 +1,11 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=0,-125,1207,682,1,0,125>
+  <View=0,0,1207,682,1,0,0>
   <Grid=10,10,1>
-  <DataSet=3_Resistor_RNHR_TB.dat>
-  <DataDisplay=3_Resistor_RNHR_TB.dpl>
+  <DataSet=3_Resistor_sample_TB.dat>
+  <DataDisplay=3_Resistor_sample_TB.dpl>
   <OpenDisplay=0>
-  <Script=3_Resistor_RNHR_TB.m>
+  <Script=3_Resistor_sample_TB.m>
   <RunScript=0>
   <showFrame=0>
   <FrameText0=Title>
@@ -27,13 +27,11 @@
   <GND * 1 410 270 0 0 0 0>
   <.DC DC1 1 220 80 0 32 0 0 "26.85" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "no" 0 "150" 0 "no" 0 "none" 0 "CroutLU" 0>
   <SpiceInclude SpiceInclude1 1 120 80 -34 17 0 0 "LL65.inc" 0 "" 0 "" 0 "" 0 "" 0>
+  <Sub SUB1 1 410 220 -16 -111 0 3 "3_Resistor_sample.sch" 0 "1e-6" 1 "5e-6" 1>
+  <Sub SUB2 1 410 430 -16 54 0 1 "3_Resistor_sample.sch" 0 "1e-6" 1 "5e-6" 1>
+  <Sub SUB3 1 640 220 -36 -111 0 3 "3_Resistor_sample.sch" 0 "1e-6" 1 "5e-6" 1>
   <GND * 1 640 270 0 0 0 0>
   <GND * 1 730 220 0 0 0 1>
-  <Sub SUB1 1 410 220 -16 -111 0 3 "3_Resistor_sample.sch" 0 "1e-6" 1 "6.1e-6" 1>
-  <Sub SUB3 1 640 220 -36 -111 0 3 "3_Resistor_sample.sch" 0 "1e-6" 1 "6.1e-6" 1>
-  <Sub SUB2 1 410 430 -16 54 0 1 "3_Resistor_sample.sch" 0 "1e-6" 1 "6.1e-6" 1>
-  <.SW SW1 1 1030 80 0 52 0 0 "DC1" 1 "lin" 1 "temp" 1 "25" 1 "100" 1 "76" 1>
-  <NutmegEq NutmegEq1 1 910 90 -27 17 0 0 "SW1" 1 "Res1Val=1/i(vpr1)" 1 "Res2Val=1/i(vpr2)" 1>
 </Components>
 <Wires>
   <120 230 120 220 "" 0 0 0 "">
@@ -47,16 +45,6 @@
   <500 220 550 220 "" 0 0 0 "">
 </Wires>
 <Diagrams>
-  <Rect 620 530 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
-	<"ngspice/sw1.res1val" #0000ff 2 3 0 0 0>
-  </Rect>
-  <Rect 930 530 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
-	<"ngspice/sw1.res2val" #ff0000 2 3 0 0 0>
-	  <Mkr 100 -54 75 5 0 0>
-  </Rect>
 </Diagrams>
 <Paintings>
-  <Text 790 260 12 #000000 0 "R = V/I. But voltage V = 1">
-  <Rectangle 780 260 210 20 #000000 2 1 #c0c0c0 1 0>
-  <Arrow 970 260 -20 -70 20 8 #000000 1 1 0>
 </Paintings>
