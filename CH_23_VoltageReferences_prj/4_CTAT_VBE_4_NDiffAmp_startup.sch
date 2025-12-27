@@ -1,11 +1,11 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=-239,-279,1671,801,0.632067,0,1>
+  <View=-118,-210,1599,760,0.703093,0,0>
   <Grid=10,10,1>
-  <DataSet=4_CTAT_VBE_4_NDiffAmp.dat>
-  <DataDisplay=4_CTAT_VBE_4_NDiffAmp.dpl>
+  <DataSet=4_CTAT_VBE_4_NDiffAmp_startup.dat>
+  <DataDisplay=4_CTAT_VBE_4_NDiffAmp_startup.dpl>
   <OpenDisplay=0>
-  <Script=4_CTAT_VBE_4_NDiffAmp.m>
+  <Script=4_CTAT_VBE_4_NDiffAmp_startup.m>
   <RunScript=0>
   <showFrame=0>
   <FrameText0=Title>
@@ -26,7 +26,6 @@
   <PMOS_SPICE M1 1 1040 150 -26 -72 1 0 "p_25od33_ll W=6.9u L=500n SA=175n SB=175n SD=0 AS=1.2075p AD=1.2075p PS=14.15u PD=14.15u SCA=1.20937 SCB=992.891u SCC=44.275u" 0 "" 0 "" 0 "" 0 "" 0>
   <PMOS_SPICE M2 1 840 150 0 -72 0 2 "p_25od33_ll W=6.9u L=500n SA=175n SB=175n SD=0 AS=1.2075p AD=1.2075p PS=14.15u PD=14.15u SCA=1.20937 SCB=992.891u SCC=44.275u" 0 "" 0 "" 0 "" 0 "" 0>
   <SpiceInclude SpiceInclude1 1 70 50 -35 18 0 0 "LL65.inc" 0 "" 0 "" 0 "" 0 "" 0>
-  <.DC DC1 1 40 120 0 32 0 0 "26.85" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "no" 0 "150" 0 "no" 0 "none" 0 "CroutLU" 0>
   <NMOS_SPICE M3 1 480 320 -43 20 0 0 "n_25od33_ll W=500n L=1.5u SA=175n SB=175n SD=0 AS=87.5f AD=87.5f PS=1.35u PD=1.35u SCA=9.35673 SCB=11.712m SCC=603.135u" 0 "" 0 "" 0 "" 0 "" 0>
   <GND * 1 500 320 0 0 0 1>
   <NMOS_SPICE M4 1 480 410 -43 20 0 0 "n_25od33_ll W=500n L=1.5u SA=175n SB=175n SD=0 AS=87.5f AD=87.5f PS=1.35u PD=1.35u SCA=9.35673 SCB=11.712m SCC=603.135u" 0 "" 0 "" 0 "" 0 "" 0>
@@ -37,14 +36,13 @@
   <PMOS_SPICE M6 1 480 150 0 -72 0 2 "p_25od33_ll W=6.9u L=500n SA=175n SB=175n SD=0 AS=1.2075p AD=1.2075p PS=14.15u PD=14.15u SCA=1.20937 SCB=992.891u SCC=44.275u" 0 "" 0 "" 0 "" 0 "" 0>
   <PMOS_SPICE M7 1 610 240 -50 -60 1 0 "p_25od33_ll W=500n L=500n SA=175n SB=175n SD=0 AS=87.5f AD=87.5f PS=1.35u PD=1.35u SCA=9.35673 SCB=11.712m SCC=603.135u" 0 "" 0 "" 0 "" 0 "" 0>
   <GND * 1 1180 190 0 0 0 0>
-  <.SW SW1 1 40 200 0 52 0 0 "DC1" 1 "lin" 1 "temp" 1 "25" 1 "100" 1 "76" 1>
   <GND * 1 1010 270 0 0 0 0>
-  <NutmegEq NutmegEq1 1 200 430 -27 17 0 0 "SW2" 1 "VSG_Pmos=v(VSUP)-v(Vbias)" 1>
-  <.SW SW2 1 170 200 0 52 0 0 "DC1" 1 "lin" 1 "V1" 1 "0.1" 1 "3.3" 1 "2500" 1>
   <Sub SUB2 1 940 270 30 -86 0 0 "4_NMOS_DiffAmp_2_LevelShiftedInput.sch" 0>
-  <Vdc V1 1 1180 160 18 -26 0 1 "3.3 V" 1>
-  <GND * 1 1030 -60 0 0 0 0>
-  <NMOS_SPICE M8 1 1030 -90 32 -53 0 3 "n_25od33_ll W=4u L=4u SA=175n SB=175n SD=0 AS=700f AD=700f PS=8.35u PD=8.35u SCA=1.9975 SCB=1.71274m SCC=76.3744u" 0 "+m=5" 1 "" 0 "" 0 "" 0>
+  <GND * 1 1070 -60 0 0 0 0>
+  <NutmegEq NutmegEq1 1 70 280 -27 17 0 0 "TR1" 1 "VSG_Pmos=v(VSUP)-v(Vbias)" 1>
+  <Vpulse V1 1 1180 160 18 -26 0 1 "0 V" 1 "3.3 V" 1 "30 ns" 1 "230 ns" 1 "10 ns" 0 "10 ns" 0>
+  <.TR TR1 1 40 120 0 52 0 0 "lin" 1 "0" 1 "200 ns" 1 "2000" 0 "Trapezoidal" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "no" 0 "0" 0>
+  <NMOS_SPICE M8 1 1070 -90 32 -53 0 3 "n_25od33_ll W=4u L=4u SA=175n SB=175n SD=0 AS=700f AD=700f PS=8.35u PD=8.35u SCA=1.9975 SCB=1.71274m SCC=76.3744u" 0 "+m=5" 1 "" 0 "" 0 "" 0>
 </Components>
 <Wires>
   <870 450 870 480 "" 0 0 0 "">
@@ -78,12 +76,13 @@
   <990 350 1040 350 "" 0 0 0 "">
   <940 150 1010 150 "" 0 0 0 "">
   <940 150 940 170 "" 0 0 0 "">
-  <1000 -90 1000 -60 "" 0 0 0 "">
-  <1000 -60 1030 -60 "" 0 0 0 "">
-  <1060 -90 1060 -60 "" 0 0 0 "">
-  <1030 -60 1060 -60 "" 0 0 0 "">
-  <1030 -70 1030 -60 "" 0 0 0 "">
-  <1030 -140 1030 -120 "" 0 0 0 "">
+  <1040 -90 1040 -60 "" 0 0 0 "">
+  <1040 -60 1070 -60 "" 0 0 0 "">
+  <1100 -90 1100 -60 "" 0 0 0 "">
+  <1070 -60 1100 -60 "" 0 0 0 "">
+  <1070 -70 1070 -60 "" 0 0 0 "">
+  <1070 -140 1070 -120 "" 0 0 0 "">
+  <1180 120 1180 130 "" 0 0 0 "">
   <1040 120 1040 120 "VSUP" 1070 90 0 "">
   <1060 150 1060 150 "VSUP" 1090 120 0 "">
   <840 120 840 120 "VSUP" 770 90 0 "">
@@ -92,29 +91,20 @@
   <460 150 460 150 "VSUP" 400 140 0 "">
   <630 240 630 240 "VSUP" 660 210 0 "">
   <910 230 910 230 "VSUP" 880 190 0 "">
-  <1180 130 1180 130 "VSUP" 1210 100 0 "">
   <1040 350 1040 350 "Vref" 1070 320 0 "">
-  <1030 -140 1030 -140 "Vbias" 970 -170 0 "">
+  <1070 -140 1070 -140 "Vbias" 1010 -170 0 "">
+  <1180 120 1180 120 "VSUP" 1210 90 0 "">
 </Wires>
 <Diagrams>
-  <Rect 1190 410 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
-	<"ngspice/sw2.v(vref)" #0000ff 2 3 0 0 0>
-	  <Mkr 1.80052 29 -77 3 0 0>
-	  <Mkr 3.29999 78 -239 3 0 0>
-  </Rect>
-  <Rect 1190 730 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
-	<"ngspice/sw1.v(vref)" #ff0000 2 3 0 0 0>
+  <Rect 1200 480 240 160 3 #c0c0c0 1 00 1 0 1e-07 5e-07 1 -1.18706 2 4 1 -1 1 1 315 0 225 1 0 0 "" "" "">
+	<"ngspice/tran.v(vref)" #0000ff 2 3 0 0 0>
+	<"ngspice/tran.v(vbe)" #ff0000 2 3 0 0 0>
+	<"ngspice/tran.v(vsup)" #ff00ff 2 3 0 0 0>
   </Rect>
 </Diagrams>
 <Paintings>
-  <Text 1290 490 12 #000000 0 "Supply Sweep">
-  <Arrow 1380 480 -10 -50 20 8 #000000 1 1 0>
-  <Text 910 730 12 #000000 0 "Temperature sweep">
-  <Arrow 1060 740 80 -30 20 8 #000000 1 1 0>
-  <Rectangle 1280 480 120 40 #000000 2 1 #c0c0c0 1 0>
-  <Rectangle 900 720 160 40 #000000 2 1 #c0c0c0 1 0>
-  <Text 1060 -170 12 #000000 0 "4μm X 4μm">
-  <Text 1100 -70 12 #000000 0 "5 devices in parallel.\nC_{total} = 95 fF * 5 = 475 fF\n\nSee  0-NMOS-IO33-CV-Curve for more info\n">
-  <Rectangle 1090 -80 320 80 #000000 1 1 #c0c0c0 1 0>
-  <Arrow 1100 -70 70 -30 20 8 #000000 1 1 0>
+  <Text 1100 -170 12 #000000 0 "4μm X 4μm">
+  <Text 1140 -70 12 #000000 0 "5 devices in parallel.\nC_{total} = 95 fF * 5 = 475 fF\n\nSee  0-NMOS-IO33-CV-Curve for more info\n">
+  <Rectangle 1130 -80 320 80 #000000 1 1 #c0c0c0 1 0>
+  <Arrow 1140 -70 70 -30 20 8 #000000 1 1 0>
 </Paintings>

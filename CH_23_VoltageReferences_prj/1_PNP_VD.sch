@@ -1,6 +1,6 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=155,-169,1399,551,0.970448,0,0>
+  <View=2,-211,1492,636,0.9687,212,89>
   <Grid=10,10,1>
   <DataSet=1_PNP_VD.dat>
   <DataDisplay=1_PNP_VD.dpl>
@@ -22,10 +22,10 @@
   <GND * 1 410 20 0 0 0 2>
   <GND * 1 300 280 0 0 0 0>
   <Vdc V1 1 410 70 -62 -26 0 3 "1.2" 1>
-  <SpiceInclude SpiceInclude1 1 1240 -10 -34 17 0 0 "LL65.inc" 0 "" 0 "" 0 "" 0 "" 0>
+  <SpiceInclude SpiceInclude1 1 310 -70 -34 17 0 0 "LL65.inc" 0 "" 0 "" 0 "" 0 "" 0>
   <PNP_SPICE Q1 1 410 340 39 -61 0 2 "pnp_v20x20_ll" 1 "" 0 "" 0 "" 0 "" 0>
   <Idc I1 1 410 150 -72 -26 0 3 "5 uA" 1>
-  <.DC DC1 1 970 -10 0 32 0 0 "26.85" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "no" 0 "150" 0 "no" 0 "none" 0 "CroutLU" 0>
+  <.DC DC1 1 970 50 0 32 0 0 "26.85" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "no" 0 "150" 0 "no" 0 "none" 0 "CroutLU" 0>
   <GND * 1 760 370 0 0 0 0>
   <IProbe Pr3 1 760 240 -37 -26 0 3>
   <VProbe Pr4 1 660 260 -49 -31 1 2>
@@ -34,7 +34,9 @@
   <Vdc V2 1 760 70 -62 -26 0 3 "1.2" 1>
   <Idc I2 1 760 150 -72 -26 0 3 "5 uA" 1>
   <PNP_SPICE Q2 1 760 340 39 -61 0 2 "pnp_v20x20_ll" 1 "+m=8" 1 "" 0 "" 0 "" 0>
-  <NutmegEq NutmegEq1 1 1230 60 -27 17 0 0 "DC1" 1 "Rout_single=v(VBE1)/i(Vpr1)" 1 "Rout_8Parallel=v(VBE2)/i(Vpr3)" 1>
+  <NutmegEq NutmegEq1 1 1220 -70 -27 17 0 0 "DC1" 1 "Rout_single=v(VBE1)/i(Vpr1)" 1 "Rout_8Parallel=v(VBE2)/i(Vpr3)" 1>
+  <NutmegEq NutmegEq2 1 990 -70 -27 17 0 0 "SW1" 1 "dVd1_by_dT=deriv(v(VBE1))" 1 "dVd2_by_dT=deriv(v(VBE2))" 1>
+  <.SW SW1 1 820 -70 0 52 0 0 "DC1" 1 "lin" 1 "temp" 1 "25" 1 "100" 1 "250" 1>
 </Components>
 <Wires>
   <440 340 440 370 "" 0 0 0 "">
@@ -55,14 +57,22 @@
   <670 280 760 280 "" 0 0 0 "">
 </Wires>
 <Diagrams>
-  <Tab 870 143 293 53 3 #c0c0c0 1 00 1 0 1 1 1 0 1 1 1 0 1 1 315 0 225 1 0 0 "" "" "">
-	<"ngspice/rout_single" #0000ff 0 5 1 0 0>
-	<"ngspice/rout_8parallel" #0000ff 0 5 1 0 0>
+  <Tab 320 483 363 53 3 #c0c0c0 1 00 1 0 1 1 1 0 1 1 1 0 1 1 315 0 225 1 0 0 "" "" "">
+	<"ngspice/dc1.rout_single" #0000ff 0 5 0 0 0>
+	<"ngspice/dc1.rout_8parallel" #0000ff 0 5 0 0 0>
   </Tab>
+  <Rect 1130 240 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
+	<"ngspice/sw1.v(vbe1)" #0000ff 2 3 0 0 0>
+	<"ngspice/sw1.v(dvd1_by_dt)" #ff0000 2 3 0 0 1>
+  </Rect>
+  <Rect 1130 520 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
+	<"ngspice/sw1.v(vbe2)" #0000ff 2 3 0 0 0>
+	<"ngspice/sw1.v(dvd2_by_dt)" #ff0000 2 3 0 0 1>
+  </Rect>
 </Diagrams>
 <Paintings>
-  <Text 970 230 14 #000000 0 "Just Run a DC Bias Calc - F8\nTested, agrees with SPECTRE">
-  <Rectangle 970 220 260 60 #000000 1 1 #c0c0c0 1 0>
+  <Text 460 -70 14 #000000 0 "Just Run a DC Bias Calc - F8\nTested, agrees with SPECTRE">
+  <Rectangle 460 -80 260 60 #000000 1 1 #c0c0c0 1 0>
   <Text 730 460 14 #000000 0 "8 Devices in Parallel">
   <Text 730 420 18 #ff0000 0 "NOTE!">
   <Rectangle 720 410 190 80 #000000 2 1 #c0c0c0 1 0>
