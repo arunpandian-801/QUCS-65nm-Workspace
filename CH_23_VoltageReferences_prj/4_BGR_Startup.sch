@@ -1,6 +1,6 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=31,-9,1901,1321,0.695918,94,244>
+  <View=-368,-220,2163,1336,0.476923,0,60>
   <Grid=10,10,1>
   <DataSet=4_BGR_Startup.dat>
   <DataDisplay=4_BGR_Startup.dpl>
@@ -110,10 +110,10 @@
   <910 230 910 230 "VSUP" 880 190 0 "">
   <1280 120 1280 120 "VSUP" 1310 90 0 "">
   <1300 150 1300 150 "VSUP" 1330 120 0 "">
+  <290 120 290 120 "VSUP" 320 90 0 "">
   <1040 350 1040 350 "Vref" 1070 320 0 "">
   <1220 150 1220 150 "Vbias" 1200 110 0 "">
   <1380 300 1380 300 "VBGR" 1410 270 0 "">
-  <290 120 290 120 "VSUP" 320 90 0 "">
   <1120 -150 1120 -150 "Vbias" 1060 -180 0 "">
 </Wires>
 <Diagrams>
@@ -130,10 +130,10 @@
   <Rectangle 1180 -90 320 80 #000000 1 1 #c0c0c0 1 0>
   <Arrow 1190 -80 70 -30 20 8 #000000 1 1 0>
   <Text 750 790 18 #ff0000 0 "COMPUTING PTAT VOLTAGE SOURCE - L*R resistor">
-  <Text 300 840 14 #000000 0 "V_{BGR} = VQ_3 + L * η * ln K * V_T\n~\nFrom SPICE Model "pnp_v20x20_ll" we need to get η.\nSince this is a diode connected PNP => Emitter P - Base N Diode\n(Collector is shorted and also reverse biased)\n~\nSo, you need "NC - B-C leakage emission coefficient"\n~\nAnd that is: "NC = η = 1065e-3"\n~\nδV_{BGR}/δT = δVQ_3/δT + L * η * ln K * δV_T/δT = 0 (For ZTC)\n~\nδVQ_3/δT = - 1.75 mV/C (From 1_PNP_VD.sch See for 8 Parallel PNP Diodes)">
-  <Text 1100 850 14 #000000 0 "Therefore,\nL = (-δVQ_3/δT) / (η * ln K * δV_T/δT)\n~\nδV_T/δT = 0.085 mV/C\n~\nChug and Plug, L = (-(-1.75m))/(1065e-3 * ln 8 * 0.085m) = 9.296\n~\nTherefore L * R = 9.296 * 10.9 kΩ = 101.33 kΩ.">
+  <Text 300 840 14 #000000 0 "V_{BGR} = VQ_3 + L * η * ln K * V_T\n~\nFrom SPICE Model "pnp-v20x20-ll" we need to get η.\nSince this is a diode connected PNP => Emitter P - Base N Diode\n(Collector is shorted and also reverse biased)\n~\nForward "Base - emitter" Diode is modelled using IS and NF (Forward\nEmission Coefficient)\n~\nAnd that is: "NF = η = 1003.6e-3"\n~\nδV_{BGR}/δT = δVQ_3/δT + L * η * ln K * δV_T/δT = 0 (For ZTC)\n~\nδVQ_3/δT = - 1.75 mV/C (From 1-PNP-VD.sch See for 8 Parallel PNP Diodes)">
+  <Text 1100 850 14 #000000 0 "Therefore,\nL = (-δVQ_3/δT) / (η * ln K * δV_T/δT)\n~\nδV_T/δT = 0.085 mV/C\n~\nPlug and Chug, L = (-(-1.75m))/(1003.6e-3 * ln 8 * 0.085m) = 9.865\n~\nTherefore L * R = 9.865 * 10.9 kΩ = 107.53 kΩ.">
   <Text 1100 1070 14 #0000ff 0 "Later manually adjusted to 99 kΩ to get BGR Bow">
-  <Rectangle 280 780 1410 390 #000000 2 1 #c0c0c0 1 0>
-  <Line 1000 820 0 350 #000000 2 2>
+  <Rectangle 280 780 1410 410 #000000 2 1 #c0c0c0 1 0>
+  <Line 1000 820 0 370 #000000 2 2>
   <Line 280 820 1410 0 #000000 2 1>
 </Paintings>
