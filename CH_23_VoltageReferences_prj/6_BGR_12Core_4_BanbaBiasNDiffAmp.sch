@@ -1,11 +1,11 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=-8,-117,1748,875,0.687358,0,0>
+  <View=-1,-1,1770,1159,0.687358,10,115>
   <Grid=10,10,1>
-  <DataSet=6_BGR_12Core_3_BanbaBiasNDiffAmp.dat>
-  <DataDisplay=6_BGR_12Core_3_BanbaBiasNDiffAmp.dpl>
+  <DataSet=6_BGR_12Core_4_BanbaBiasNDiffAmp.dat>
+  <DataDisplay=6_BGR_12Core_4_BanbaBiasNDiffAmp.dpl>
   <OpenDisplay=0>
-  <Script=6_BGR_12Core_3_BanbaBiasNDiffAmp.m>
+  <Script=6_BGR_12Core_4_BanbaBiasNDiffAmp.m>
   <RunScript=0>
   <showFrame=0>
   <FrameText0=Title>
@@ -33,14 +33,9 @@
   <GND * 1 1260 440 0 0 0 0>
   <GND * 1 1070 570 0 0 0 0>
   <GND * 1 550 570 0 0 0 0>
-  <R_SPICE R3 1 550 540 15 -26 0 1 "rnhr_ll 107.5k" 1 "" 0 "" 0 "" 0 "" 0 "2" 1 "R" 1>
-  <R_SPICE R2 1 1070 540 15 -26 0 1 "rnhr_ll 107.5k" 1 "" 0 "" 0 "" 0 "" 0 "2" 1 "R" 1>
-  <R_SPICE R1 1 1260 410 15 -26 0 1 "rnhr_ll 65.6k" 1 "" 0 "" 0 "" 0 "" 0 "2" 1 "R" 1>
-  <Sub SUB4 1 820 310 70 -56 0 0 "7_BanbaBiasScheme_ErrorAmp.sch" 0>
   <PMOS_SPICE M1 1 680 150 19 -40 0 2 "p_12_llrvt W=7.9u L=130n SA=160n SB=160n SD=0 AD=1.264p AS=1.264p PD=16.12u PS=16.12u SCA=3.31263 SCB=2.09276m SCC=353.054u" 0 "+m=1" 1 "" 0 "" 0 "" 0>
   <PMOS_SPICE M2 1 940 150 -36 -37 1 0 "p_12_llrvt W=7.9u L=130n SA=160n SB=160n SD=0 AD=1.264p AS=1.264p PD=16.12u PS=16.12u SCA=3.31263 SCB=2.09276m SCC=353.054u" 0 "+m=1" 1 "" 0 "" 0 "" 0>
   <Vdc V2 1 210 180 18 -26 0 1 "1.2 V" 1>
-  <Vdc V1 1 210 240 18 -26 1 3 "0 V" 1>
   <GND * 1 210 270 0 0 0 0>
   <.SW SW1 1 40 130 0 52 0 0 "DC1" 1 "lin" 1 "V1" 1 "0" 1 "1.2" 1 "1201" 1>
   <PMOS_SPICE M4 1 430 150 33 -52 0 2 "p_12_llrvt W=7.9u L=130n SA=160n SB=160n SD=0 AD=1.264p AS=1.264p PD=16.12u PS=16.12u SCA=3.31263 SCB=2.09276m SCC=353.054u" 0 "+m=1" 1 "" 0 "" 0 "" 0>
@@ -52,15 +47,21 @@
   <GND * 1 430 670 0 0 0 0>
   <GND * 1 450 640 0 0 0 0>
   <PMOS_SPICE M10 1 550 250 -45 -41 1 0 "p_12_llrvt W=1.3u L=65n SA=1.6e-07 SB=1.6e-07 SD=0 AS=208f AD=208f PS=2.92u PD=2.92u SCA=18.3908 SCB=12.6274m SCC=2.14545m" 0 "" 0 "" 0 "" 0 "" 0>
+  <Sub SUB4 1 820 310 70 -56 0 0 "7_BanbaBiasScheme_ErrorAmp_2.sch" 0>
+  <PMOS_SPICE M11 1 680 70 19 -40 0 2 "p_12_llrvt W=7.9u L=130n SA=160n SB=160n SD=0 AD=1.264p AS=1.264p PD=16.12u PS=16.12u SCA=3.31263 SCB=2.09276m SCC=353.054u" 0 "+m=1" 1 "" 0 "" 0 "" 0>
+  <PMOS_SPICE M12 1 940 70 -36 -37 1 0 "p_12_llrvt W=7.9u L=130n SA=160n SB=160n SD=0 AD=1.264p AS=1.264p PD=16.12u PS=16.12u SCA=3.31263 SCB=2.09276m SCC=353.054u" 0 "+m=1" 1 "" 0 "" 0 "" 0>
+  <PMOS_SPICE M13 1 430 70 33 -52 0 2 "p_12_llrvt W=7.9u L=130n SA=160n SB=160n SD=0 AD=1.264p AS=1.264p PD=16.12u PS=16.12u SCA=3.31263 SCB=2.09276m SCC=353.054u" 0 "+m=1" 1 "" 0 "" 0 "" 0>
+  <PMOS_SPICE M14 1 1260 70 -36 -37 1 0 "p_12_llrvt W=7.9u L=130n SA=160n SB=160n SD=0 AD=1.264p AS=1.264p PD=16.12u PS=16.12u SCA=3.31263 SCB=2.09276m SCC=353.054u" 0 "" 0 "" 0 "" 0 "" 0>
+  <R_SPICE R3 1 550 540 15 -26 0 1 "rnhr_ll LR" 1 "" 0 "" 0 "" 0 "" 0 "2" 1 "R" 1>
+  <R_SPICE R2 1 1070 540 15 -26 0 1 "rnhr_ll LR" 1 "" 0 "" 0 "" 0 "" 0 "2" 1 "R" 1>
+  <R_SPICE R1 1 1260 410 15 -26 0 1 "rnhr_ll NR" 1 "" 0 "" 0 "" 0 "" 0 "2" 1 "R" 1>
+  <SpicePar SpicePar1 1 220 360 -26 17 0 0 "LR=108e3" 1 "NR=46.2e3" 1>
+  <Vdc V1 1 210 240 18 -26 1 3 "0 V" 1>
 </Components>
 <Wires>
   <680 680 680 700 "" 0 0 0 "">
   <710 650 710 680 "" 0 0 0 "">
   <680 680 710 680 "" 0 0 0 "">
-  <660 120 660 150 "" 0 0 0 "">
-  <660 120 680 120 "" 0 0 0 "">
-  <960 120 960 150 "" 0 0 0 "">
-  <940 120 960 120 "" 0 0 0 "">
   <680 180 680 200 "" 0 0 0 "">
   <940 180 940 200 "" 0 0 0 "">
   <680 100 680 120 "" 0 0 0 "">
@@ -77,8 +78,6 @@
   <940 680 940 700 "" 0 0 0 "">
   <940 600 940 620 "" 0 0 0 "">
   <940 390 940 440 "" 0 0 0 "">
-  <1280 120 1280 150 "" 0 0 0 "">
-  <1260 120 1280 120 "" 0 0 0 "">
   <1260 100 1260 120 "" 0 0 0 "">
   <1190 150 1230 150 "" 0 0 0 "">
   <1260 180 1260 200 "" 0 0 0 "">
@@ -92,8 +91,6 @@
   <820 150 820 200 "" 0 0 0 "">
   <550 390 550 510 "" 0 0 0 "">
   <1070 390 1070 510 "" 0 0 0 "">
-  <410 120 410 150 "" 0 0 0 "">
-  <410 120 430 120 "" 0 0 0 "">
   <430 100 430 120 "" 0 0 0 "">
   <400 280 400 370 "" 0 0 0 "">
   <430 310 430 340 "" 0 0 0 "">
@@ -114,15 +111,31 @@
   <460 150 550 150 "Vmir" 520 60 50 "">
   <550 150 550 220 "" 0 0 0 "">
   <550 280 550 390 "" 0 0 0 "">
-  <790 240 790 240 "VSUP" 750 190 0 "">
+  <680 20 680 40 "" 0 0 0 "">
+  <940 20 940 40 "" 0 0 0 "">
+  <910 70 910 150 "" 0 0 0 "">
+  <710 70 710 150 "" 0 0 0 "">
+  <430 20 430 40 "" 0 0 0 "">
+  <460 70 460 150 "" 0 0 0 "">
+  <1260 20 1260 40 "" 0 0 0 "">
+  <1230 70 1230 150 "" 0 0 0 "">
+  <1280 150 1280 150 "VSUP" 1310 120 0 "">
+  <660 150 660 150 "VSUP" 630 120 0 "">
+  <960 150 960 150 "VSUP" 970 120 0 "">
   <210 150 210 150 "VSUP" 240 120 0 "">
+  <410 150 410 150 "VSUP" 360 120 0 "">
   <570 250 570 250 "VSUP" 600 220 0 "">
-  <680 100 680 100 "VSUP" 710 70 0 "">
-  <940 100 940 100 "VSUP" 970 70 0 "">
-  <1260 100 1260 100 "VSUP" 1290 70 0 "">
+  <790 240 790 240 "VSUP" 760 200 0 "">
+  <660 70 660 70 "VSUP" 630 40 0 "">
+  <960 70 960 70 "VSUP" 970 40 0 "">
+  <410 70 410 70 "VSUP" 360 40 0 "">
+  <1280 70 1280 70 "VSUP" 1310 40 0 "">
   <1190 150 1190 150 "Vmir" 1130 110 0 "">
   <1340 320 1340 320 "VPTAT" 1370 290 0 "">
-  <430 100 430 100 "VSUP" 420 50 0 "">
+  <680 20 680 20 "VSUP" 710 -10 0 "">
+  <940 20 940 20 "VSUP" 970 -10 0 "">
+  <430 20 430 20 "VSUP" 420 -30 0 "">
+  <1260 20 1260 20 "VSUP" 1290 -10 0 "">
 </Wires>
 <Diagrams>
   <Rect 1460 240 240 160 3 #c0c0c0 1 00 1 0 0.2 1.2 1 -0.0792807 0.5 1 1 -1 1 1 315 0 225 1 0 0 "" "" "">
@@ -135,4 +148,7 @@
   </Rect>
 </Diagrams>
 <Paintings>
+  <Text 410 840 12 #000000 0 "Something wrong with our casual simulators:\nNGSPICE, LTSPICE, SPECTRE (yet to test on this, but I have a\nhunch).\n~\nSlight changes in LR resistor value, suddenly bring output\nvoltage to mV range, even though Bias Calc shows correct value.\n~\nNO IDEA WHY THIS HAPPENS BUT THIS SUCKS!\n~\nFortunately, ADS doesn't show these issues. (But even that\nhas the supply sweep issue though:(  )">
+  <Text 410 800 18 #ff0000 0 "NOTE:">
+  <Rectangle 390 790 500 280 #000000 2 1 #c0c0c0 1 0>
 </Paintings>
