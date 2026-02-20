@@ -17,8 +17,8 @@
 !Experimentation_Analog65_1_prj/
 
 # I can't figure out how to add Docs/ subdirectory in all the project directories.
-# So, it is forcefully added for now.
-!**/Docs/
+# So, it is forcefully added for now using "git add <path to Folder>" command
+# !**/Docs/
 
 # Ignore Display Windows, Simulation datasets
 *.dpl
