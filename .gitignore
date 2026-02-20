@@ -7,17 +7,18 @@
 !NormanBalabanian_CH_02_prj/
 !CH_10_ModelsForDigitalDesign_prj/
 !CH_18_SplPurposeCMOS_prj/
+!CH_19_DPLL_prj/
 !CH_20_CurrentMirrors_prj/
 !CH_22_DifferentialAmplifiers_prj/
 !CH_23_VoltageReferences_prj
 !CH_23_VoltageReferences_2_prj
 !CH_24_OpAmpsI_prj/
-!QUCSS_Playground_prj
+!QUCSS_Playground_prj/
 !Experimentation_Analog65_1_prj/
 
 # I can't figure out how to add Docs/ subdirectory in all the project directories.
 # So, it is forcefully added for now.
-# !**/Docs/
+!**/Docs/
 
 # Ignore Display Windows, Simulation datasets
 *.dpl
