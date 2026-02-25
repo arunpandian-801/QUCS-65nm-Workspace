@@ -1,6 +1,6 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=2,631,1274,1913,1,12,600>
+  <View=2,-198,1234,1760,1,12,0>
   <Grid=10,10,1>
   <DataSet=04_VCO_Cell_TB_02_TF.dat>
   <DataDisplay=04_VCO_Cell_TB_02_TF.dpl>
@@ -83,4 +83,8 @@
   <Text 700 1430 12 #000000 0 "Find the correct measurements here:\nFrom "04-VCO-Cell-TB-03-TF-TableFormat.sch"">
   <Rectangle 640 1420 490 300 #000000 2 1 #c0c0c0 1 0>
   <Line 640 1480 490 0 #000000 2 1>
+  <Text 390 -180 26 #0000ff 0 "UPDATE">
+  <Text 130 -130 18 #000000 0 "This shitty TF is due to insufficient Transient Simulation points.\n~\nRefer to "04-VCO-Cell-TB-05-TF-MoreTransienTSimPoints.sch"\nfor correct curve!">
+  <Rectangle 110 -180 690 170 #000000 2 1 #c0c0c0 1 0>
+  <Line 110 -140 690 0 #000000 2 1>
 </Paintings>
