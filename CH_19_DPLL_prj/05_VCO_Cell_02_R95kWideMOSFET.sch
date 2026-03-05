@@ -1,11 +1,11 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=60,-50,2488,766,1,0,67>
+  <View=73,-306,2489,1059,0.499793,0,0>
   <Grid=10,10,1>
-  <DataSet=05_VCO_Cell_IdealVCCS.dat>
-  <DataDisplay=05_VCO_Cell_IdealVCCS.dpl>
+  <DataSet=05_VCO_Cell_02_R95kWideMOSFET.dat>
+  <DataDisplay=05_VCO_Cell_02_R95kWideMOSFET.dpl>
   <OpenDisplay=0>
-  <Script=05_VCO_Cell_IdealVCCS.m>
+  <Script=05_VCO_Cell_02_R95kWideMOSFET.m>
   <RunScript=0>
   <showFrame=0>
   <FrameText0=Title>
@@ -14,7 +14,7 @@
   <FrameText3=Revision:>
 </Properties>
 <Symbol>
-  <.ID -50 64 SUB "1=g1=5e-6=VCCS Transconductance=A_per_V">
+  <.ID -50 64 SUB "1=rdegen=95k=Degeneration Resistor Value=Ohms">
   <.PortSym -60 -60 1 0 VSUP>
   <.PortSym 70 -60 2 180 GND>
   <.PortSym -60 -10 3 0 VIN>
@@ -39,7 +39,7 @@
   <PMOS_SPICE M1 1 300 210 20 -31 0 2 "p_12_llrvt W=1.3e-06 L=6.5e-08 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=2.08e-13 AS=2.08e-13 PD=2.92e-06 PS=2.92e-06 SCA=18.3908 SCB=0.0126274 SCC=0.00214545" 0 " " 0 "" 0 "" 0 "" 0>
   <NMOS_SPICE M3 1 520 380 -36 32 0 0 "n_12_llrvt W=4e-06 L=6.5e-07 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=6.4e-13 AS=6.4e-13 PD=8.32e-06 PS=8.32e-06 SCA=6.4257 SCB=0.00413321 SCC=0.000697282" 0 "" 0 "" 0 "" 0 "" 0>
   <Port VSUP 1 300 90 -97 -13 0 0 "1" 1 "analog" 0>
-  <Port GND 1 300 600 -23 12 0 0 "2" 1 "analog" 0>
+  <Port GND 1 300 710 -23 12 0 0 "2" 1 "analog" 0>
   <Port VIN 1 140 380 -23 12 0 0 "3" 1 "analog" 0>
   <PMOS_SPICE M4 1 710 210 -41 -40 1 0 "p_12_llrvt W=1.3e-06 L=6.5e-08 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=2.08e-13 AS=2.08e-13 PD=2.92e-06 PS=2.92e-06 SCA=18.3908 SCB=0.0126274 SCC=0.00214545" 0 " " 0 "" 0 "" 0 "" 0>
   <NMOS_SPICE M5 1 710 520 24 27 1 2 "n_12_llrvt W=6.5e-07 L=6.5e-08 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=1.04e-13 AS=1.04e-13 PD=1.62e-06 PS=1.62e-06 SCA=33.3333 SCB=0.0226173 SCC=0.00426774" 0 "" 0 "" 0 "" 0 "" 0>
@@ -56,7 +56,9 @@
   <PMOS_SPICE M8 1 2230 470 -41 -40 1 0 "p_12_llrvt W=1.3e-06 L=6.5e-08 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=2.08e-13 AS=2.08e-13 PD=2.92e-06 PS=2.92e-06 SCA=18.3908 SCB=0.0126274 SCC=0.00214545" 0 " " 0 "" 0 "" 0 "" 0>
   <NMOS_SPICE M9 1 2230 640 -43 27 0 0 "n_12_llrvt W=6.5e-07 L=6.5e-08 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=1.04e-13 AS=1.04e-13 PD=1.62e-06 PS=1.62e-06 SCA=33.3333 SCB=0.0226173 SCC=0.00426774" 0 "" 0 "" 0 "" 0 "" 0>
   <Port OUT 1 2390 550 4 12 1 2 "5" 1 "analog" 0>
-  <VCCS SRC1 1 270 440 -100 69 0 0 "g1" 1 "0" 0>
+  <GND * 1 320 440 0 0 0 0>
+  <NMOS_SPICE M10 1 300 440 25 31 0 0 "n_12_llrvt W=4.2e-06 L=6.5e-08 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=6.72e-13 AS=6.72e-13 PD=8.72e-06 PS=8.72e-06 SCA=6.13027 SCB=0.00393639 SCC=0.000664078" 0 "" 0 "" 0 "" 0 "" 0>
+  <R_SPICE R1 1 300 560 15 -26 0 1 "rnhr_ll rdegen" 1 "" 0 "" 0 "" 0 "" 0 "2" 1 "R" 1>
 </Components>
 <Wires>
   <330 210 360 210 "" 0 0 0 "">
@@ -140,13 +142,12 @@
   <2180 550 2180 640 "" 0 0 0 "">
   <2230 500 2230 550 "" 0 0 0 "">
   <2230 550 2390 550 "" 0 0 0 "">
-  <300 470 300 500 "" 0 0 0 "">
-  <240 470 240 500 "" 0 0 0 "">
-  <300 500 300 600 "GND" 330 570 61 "">
-  <240 500 300 500 "" 0 0 0 "">
-  <240 380 240 410 "" 0 0 0 "">
+  <300 470 300 530 "" 0 0 0 "">
   <140 380 240 380 "" 0 0 0 "">
   <300 330 300 410 "" 0 0 0 "">
+  <300 590 300 710 "GND" 350 640 48 "">
+  <240 380 240 440 "" 0 0 0 "">
+  <240 440 270 440 "" 0 0 0 "">
   <280 210 280 210 "VSUP" 220 180 0 "">
   <540 380 540 380 "GND" 560 400 0 "">
   <710 180 710 180 "VSUP" 740 150 0 "">
@@ -197,4 +198,5 @@
   <Text 2050 700 16 #ff0000 0 "10/1">
   <Text 2210 380 16 #ff0000 0 "20/1">
   <Text 2200 700 16 #ff0000 0 "10/1">
+  <Text 320 410 16 #ff0000 0 "64.6/1">
 </Paintings>

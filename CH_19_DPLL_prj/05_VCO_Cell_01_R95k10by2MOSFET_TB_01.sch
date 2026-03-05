@@ -1,6 +1,6 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=-772,-220,2008,1353,0.434118,0,1>
+  <View=2,-314,1234,1351,1,12,0>
   <Grid=10,10,1>
   <DataSet=05_VCO_Cell_01_R95k10by2MOSFET_TB_01.dat>
   <DataDisplay=05_VCO_Cell_01_R95k10by2MOSFET_TB_01.dpl>
@@ -53,8 +53,8 @@
   </Tab>
 </Diagrams>
 <Paintings>
-  <Text 300 -170 22 #0000ff 0 "CONCLUSION">
-  <Text 150 -110 16 #000000 0 "It was just insufficient transient data LOL!\n~\nTaken 5,000 points in a transient simulation for just\n20 ns">
-  <Rectangle 130 -180 530 180 #000000 2 1 #c0c0c0 1 0>
-  <Line 130 -130 530 0 #000000 2 1>
+  <Text 300 -230 22 #0000ff 0 "CONCLUSION">
+  <Text 150 -170 16 #000000 0 "Too much V_{GS} is needed to turn on 10/2 MOSFET\n~\nSo, we see a non-linearity around V_{DD}/2 = 0.6 V\n~\nUSELESS!">
+  <Rectangle 130 -240 530 220 #000000 2 1 #c0c0c0 1 0>
+  <Line 130 -190 530 0 #000000 2 1>
 </Paintings>

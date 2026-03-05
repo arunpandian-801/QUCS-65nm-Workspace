@@ -2,10 +2,10 @@
 <Properties>
   <View=-347,-259,1865,992,0.5456,0,1>
   <Grid=10,10,1>
-  <DataSet=05_VCO_CurrentGeneratorDesign_01_VCCSGainTB.dat>
-  <DataDisplay=05_VCO_CurrentGeneratorDesign_01_VCCSGainTB.dpl>
+  <DataSet=05_VCO_CurrentGeneratorDesign_01_VCCSGainTB_02.dat>
+  <DataDisplay=05_VCO_CurrentGeneratorDesign_01_VCCSGainTB_02.dpl>
   <OpenDisplay=0>
-  <Script=05_VCO_CurrentGeneratorDesign_01_VCCSGainTB.m>
+  <Script=05_VCO_CurrentGeneratorDesign_01_VCCSGainTB_02.m>
   <RunScript=0>
   <showFrame=0>
   <FrameText0=Title>
@@ -49,9 +49,9 @@
   <IProbe Pr6 1 1220 50 -37 -26 0 3>
   <GND * 1 1440 430 0 0 0 0>
   <Vdc V3 1 1440 380 18 -26 0 1 "0.6 V" 1>
-  <.SW SW1 1 40 180 0 52 0 0 "DC1" 1 "lin" 1 "V1" 1 "0" 1 "1.2" 1 "1201" 1>
   <NMOS_SPICE M2 1 400 380 -26 34 0 0 "n_12_llrvt W=6.5e-07 L=1.3e-07 NF=1 SA=1.6e-07 SB=1.6e-07 SD=0 AD=1.04e-13 AS=1.04e-13 PD=1.62e-06 PS=1.62e-06 SCA=33.3333 SCB=0.0226173 SCC=0.00426774" 0 "" 0 "" 0 "" 0 "" 0>
   <VCCS SRC1 1 370 510 -26 34 0 0 "2e-6 S" 1 "0" 0>
+  <.SW SW1 1 40 180 0 52 0 0 "DC1" 1 "lin" 1 "V1" 1 "0" 1 "0.8" 1 "801" 1>
 </Components>
 <Wires>
   <570 330 590 330 "" 0 0 0 "">
@@ -118,13 +118,11 @@
   </Rect>
   <Rect 580 950 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
 	<"ngspice/sw1.i(pr2)" #0000ff 2 3 0 0 0>
-	  <Mkr 0.6 -41 -209 3 0 0>
-	  <Mkr 1 210 -264 3 0 0>
+	  <Mkr 0.6 109 -219 3 0 0>
   </Rect>
   <Rect 930 950 240 160 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 1 0 0 "" "" "">
 	<"ngspice/sw1.v(vcurrent)" #0000ff 2 3 0 0 0>
-	  <Mkr 0.6 19 -215 3 0 0>
-	  <Mkr 1 288 -238 3 0 0>
+	  <Mkr 0.6 149 -215 3 0 0>
   </Rect>
 </Diagrams>
 <Paintings>
@@ -137,5 +135,5 @@
   <Text 1270 360 16 #ff0000 0 "10/1">
   <Text 1270 150 16 #ff0000 0 "20/1">
   <Text 1270 260 16 #ff0000 0 "20/1">
-  <Text 1310 860 12 #000000 0 "0.115/1.2 μ = 95.80 kΩ\n~\n0.433/2.0 μ = 216.5 kΩ">
+  <Text 1310 860 12 #000000 0 "0.115/1.2 μ = 95.8 kΩ">
 </Paintings>

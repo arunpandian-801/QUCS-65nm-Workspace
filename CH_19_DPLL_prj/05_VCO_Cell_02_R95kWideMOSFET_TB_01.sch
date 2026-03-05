@@ -1,11 +1,11 @@
 <Qucs Schematic 25.2.0>
 <Properties>
-  <View=2,-244,1234,1351,1,12,530>
+  <View=2,-44,1234,938,1,12,300>
   <Grid=10,10,1>
-  <DataSet=05_VCO_Cell_IdealVCCS_TB_01.dat>
-  <DataDisplay=05_VCO_Cell_IdealVCCS_TB_01.dpl>
+  <DataSet=05_VCO_Cell_02_R95kWideMOSFET_TB_01.dat>
+  <DataDisplay=05_VCO_Cell_02_R95kWideMOSFET_TB_01.dpl>
   <OpenDisplay=0>
-  <Script=05_VCO_Cell_IdealVCCS_TB_01.m>
+  <Script=05_VCO_Cell_02_R95kWideMOSFET_TB_01.m>
   <RunScript=0>
   <showFrame=0>
   <FrameText0=Title>
@@ -24,7 +24,7 @@
   <Vdc V2 1 210 500 18 -26 0 1 "0.6 V" 1>
   <.CUSTOMSIM CUSTOM1 1 550 30 0 32 0 0 "\n\n* Initialise loop variable\nlet loopvar = 0\n\n* Initialise Input Voltage variable\nlet vinvco = 0.4\n\n* We're sweeping from 0.4 V to 1 V in steps of 0.05 V => 13 points\n* Initialise a vector to hold TF values for 13 length\nlet TFVal = vector(13)\n\n* Also initialise a vector to hold all input values\nlet vinsweep = vector(13)\n\nwhile loopvar < 13\n*	Write vinvco values into vector vinsweep\n	let vinsweep[loopvar] = vinvco\n\n*	Alter Voltage source V2's value with input voltage variable vinvco.	\n	alter V2 dc = vinvco\n	\n*	Run Transient Simulation and do measurements (Especially at the\n*	points where it crosses VDD/2 = 0.6 V)\n	tran 4.0008e-12 2e-08 0  uic\n\n*	Measure between first rising edge and second rising edge (1 period)	\n\n*	Also, Do your measurements after 60 ns (For stability of oscillations,\n*	we wait for some time before we measure). Accomplished using td=60e-9.\n\n	meas tran tdiff trig v(OUT) val=0.6 td=10e-9 rise=1 targ v(OUT) val=0.6 td=10e-9 rise=2\n	\n*	Remember, outpur frequency is 1/Timeperiod = 1/tdiff	\n	let TFVal[loopvar] = 1/tdiff\n\n*	Update Loop variable and change value of input Voltage source\n	let loopvar = loopvar + 1\n	let vinvco = vinvco + 0.05\nend\n\nwrite custom#sweep1#.plot TFVal vinsweep\nprint TFVal vinsweep > custom#sweep1#.print" 1 "" 0 "custom#sweep1#.plot;custom#sweep1#.print" 0>
   <.TR TR1 0 50 140 0 52 0 0 "lin" 1 "0" 1 "20 ns" 1 "5000" 1 "Trapezoidal" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "no" 1 "0" 0>
-  <Sub SUB1 1 330 200 -50 64 0 0 "05_VCO_Cell_IdealVCCS.sch" 0 "2e-6" 1>
+  <Sub SUB1 1 330 200 -50 64 0 0 "05_VCO_Cell_02_R95kWideMOSFET.sch" 0 "216.5k" 1>
 </Components>
 <Wires>
   <80 530 80 550 "" 0 0 0 "">
@@ -53,9 +53,8 @@
   </Tab>
 </Diagrams>
 <Paintings>
-  <Text 300 -170 22 #0000ff 0 "CONCLUSION">
-  <Text 150 -110 16 #000000 0 "Damn, even a trasnfer ratio of 2 μS still gives\n20 MHz range!?">
-  <Rectangle 130 -180 530 180 #000000 2 1 #c0c0c0 1 0>
-  <Line 130 -130 530 0 #000000 2 1>
-  <Text 260 310 12 #000000 0 "G = 2 μA/V\n~\n=> 1 V ---> 2 /muA">
+  <Text 300 -230 22 #0000ff 0 "CONCLUSION">
+  <Text 150 -170 16 #000000 0 "Too much V_{GS} is needed to turn on 10/2 MOSFET\n~\nSo, we see a non-linearity around V_{DD}/2 = 0.6 V\n~\nUSELESS!">
+  <Rectangle 130 -240 530 220 #000000 2 1 #c0c0c0 1 0>
+  <Line 130 -190 530 0 #000000 2 1>
 </Paintings>
