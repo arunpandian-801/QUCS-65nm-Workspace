@@ -1,6 +1,6 @@
-<Qucs Schematic 25.1.2>
+<Qucs Schematic 25.2.0>
 <Properties>
-  <View=-19,-614,2881,1247,0.41,0,0>
+  <View=20,-247,2957,961,0.564474,451,0>
   <Grid=10,10,1>
   <DataSet=2_Bias_Circuit.dat>
   <DataDisplay=2_Bias_Circuit.dpl>
@@ -304,4 +304,13 @@
   <Rectangle 2430 -90 100 110 #ff0000 2 1 #c0c0c0 1 0>
   <Rectangle 2560 270 120 100 #00ff00 2 1 #c0c0c0 1 0>
   <Rectangle 2730 290 110 100 #ff0000 2 1 #c0c0c0 1 0>
+  <Text 870 420 16 #ff0000 0 "172/2">
+  <Text 90 360 16 #ff0000 0 "86/2">
+  <Text 80 260 16 #ff0000 0 "2/10">
+  <Text 1020 110 16 #ff0000 0 "61.5/30.7">
+  <Text 1240 90 16 #ff0000 0 "61.5/30.7">
+  <Text 1250 510 16 #ff0000 0 "8.6/10">
+  <Text 1680 230 16 #ff0000 0 "24.6/10">
+  <Text 1930 380 16 #0000ff 0 "LVT\n93.84/2">
+  <Text 2460 310 16 #0000ff 0 "LVT\n38.46/2">
 </Paintings>
