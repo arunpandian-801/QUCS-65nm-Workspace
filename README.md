@@ -34,4 +34,6 @@ It could give you ideas on how to generate a specific curve when you read SPICE 
 
 QUCS-S Circuit schematics hosted in this repository are licensed under the MIT License. See `LICENSE.txt` file for more information.
 
-> 📝 **Note:** The documentation of these designs which are available in [documentation-65nm-cadence](https://github.com/arunpandian-801/documentation-65nm-cadence) repository are licensed separately under Creative Commons Attribution 4.0 International License (CC BY 4.0). See the `LICENSE.txt` file in that repository for more information.
+Copyright, © 2026, Arunpandian A.
+
+> 📝 **Note:** The documentation of these designs which are available in [documentation-65nm-cmos](https://github.com/arunpandian-801/documentation-65nm-cmos) repository are licensed separately under Creative Commons Attribution 4.0 International License (CC BY 4.0). See the `LICENSE.txt` file in that repository for more information.
